@@ -10,7 +10,6 @@ import org.I0Itec.zkclient.ZkClient;
 /**
  * zkClient sample
  * @author guolijuan
- *
  */
 public class ZKClientConnector {
 
