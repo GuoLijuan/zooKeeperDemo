@@ -6,7 +6,8 @@ import junit.framework.TestSuite;
 
 /**
  * Unit test for simple App.
- */
+ * @version 1.0
+ * /
 public class AppTest 
     extends TestCase
 {
