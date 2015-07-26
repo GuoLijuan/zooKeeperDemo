@@ -7,6 +7,11 @@ import org.I0Itec.zkclient.IZkChildListener;
 import org.I0Itec.zkclient.IZkDataListener;
 import org.I0Itec.zkclient.ZkClient;
 
+/**
+ * zkClient sample
+ * @author guolijuan
+ *
+ */
 public class ZKClientConnector {
 
 	private static final String ROOT = "/root-sample";
