@@ -15,7 +15,7 @@ import org.apache.zookeeper.CreateMode;
 public class ZookeeperFactoryBean {
 
 	private static final Logger logger = Logger.getLogger(ZookeeperFactoryBean.class);
-	private static final String PATH = "/zk-examples";
+	private static final String PATH = "/zk-curator-test";
 
 	private String connectString;
 	private List<IZKListener> listeners;
@@ -34,7 +34,7 @@ public class ZookeeperFactoryBean {
 		client.start();
 		
 		// TODO
-		client.create().withMode(CreateMode.PERSISTENT).forPath(PATH, "zk-example".getBytes());
+//		client.create().withMode(CreateMode.PERSISTENT).forPath(PATH, "zk-example".getBytes());
 		
 
 		registListeners();
@@ -68,14 +68,14 @@ public class ZookeeperFactoryBean {
 		ZookeeperFactoryBean bean = new ZookeeperFactoryBean("127.0.0.1:2181", new NodeChangedListener(PATH));
 		try {
 	        bean.startService();
-	        Thread.sleep(60000);
+	        Thread.sleep(60000);	//TODO for test
         } catch (Exception e) {
 	        // TODO Auto-generated catch block
 	        logger.info(e);
         	e.printStackTrace();
         } finally {
         	try {
-	            bean.stopService();
+//	            bean.stopService();		//TODO for test
             } catch (Exception e) {
 	            // TODO Auto-generated catch block
             	logger.info(e);
